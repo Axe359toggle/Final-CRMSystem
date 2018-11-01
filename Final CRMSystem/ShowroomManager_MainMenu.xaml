@@ -11,10 +11,8 @@
     <StackPanel>
         <Grid Height="52">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="52"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0"/>
             <Grid Grid.Column="1">
                 <local:CommonControlPanel/>
             </Grid>
