@@ -21,6 +21,6 @@
         </Grid>
         <Button x:Name="cusComp_btn" Margin="100 80 100 20" Padding="10 5 10 5" Content="Make Customer Complaint"/>
         <Button Margin="100 10 100 20" Padding="10 5 10 5" Content="Make Batch Complaint"/>
-        <Button Margin="100 10 100 20" Padding="10 5 10 5" Content="Back" Click="Button_Click"/>
+        <Button Margin="100 10 100 20" Padding="10 5 10 5" Content="Back"/>
     </StackPanel>
 </Window>
