@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:Final_CRMSystem"
              StartupUri="Login.xaml">
     <Application.Resources>
-         
+        <BitmapImage x:Key="backButtonImage" UriSource="/Resources/icons8_Back_To_96px.png" />
     </Application.Resources>
 </Application>
