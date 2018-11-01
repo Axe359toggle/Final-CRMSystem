@@ -66,5 +66,17 @@
             <TextBlock   Text="Reference ID" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <TextBox Padding="5" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
         </Grid>
+        <Grid Margin="100 50 100 0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock   Text="Customer ID" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBox Padding="5" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+            <Button Grid.Column="2" Content="Search"/>
+        </Grid>
+        
     </StackPanel>
 </Window>
