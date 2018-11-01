@@ -57,10 +57,17 @@
     <Compile Include="CommonControlPanel.xaml.cs">
       <DependentUpon>CommonControlPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomerComplaintWindow.xaml.cs">
+      <DependentUpon>CustomerComplaintWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ShowroomManager_MainMenu.xaml.cs">
       <DependentUpon>ShowroomManager_MainMenu.xaml</DependentUpon>
     </Compile>
     <Page Include="CommonControlPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomerComplaintWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
