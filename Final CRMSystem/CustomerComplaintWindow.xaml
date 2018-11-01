@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Final_CRMSystem"
         mc:Ignorable="d"
-        Title="CustomerComplaintWindow" Height="1000" Width="800">
+        Title="CustomerComplaintWindow" Height="1000" Width="800"
+        WindowStartupLocation="CenterScreen">
     <StackPanel>
         <Grid Height="52">
             <Grid.ColumnDefinitions>
