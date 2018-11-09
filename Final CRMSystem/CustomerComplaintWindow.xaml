@@ -7,8 +7,12 @@
         mc:Ignorable="d"
         Title="CustomerComplaintWindow" Height="1000" Width="800"
         WindowStartupLocation="CenterScreen">
-    <StackPanel>
-        <Grid Height="52">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="52"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Height="52">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="52"/>
                 <ColumnDefinition Width="*"/>
@@ -22,78 +26,88 @@
                 <local:CommonControlPanel/>
             </Grid>
         </Grid>
-        <Grid Margin="100 50 100 0" >
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="100"/>
-            </Grid.ColumnDefinitions>
+        <Grid Grid.Row="1">
+            <Grid VerticalAlignment="Center">
+                <StackPanel>
+                    <Grid Margin="100 50 100 0" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
 
-            <TextBlock Text="Complaint ID" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBox Padding="5" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-        </Grid>
-        <Grid Margin="100 50 100 0" >
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="100"/>
-            </Grid.ColumnDefinitions>
+                        <TextBlock Text="Complaint ID" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBox Padding="5" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                    </Grid>
+                    <Grid Margin="100 50 100 0" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
 
-            <TextBlock   Text="Reference ID" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBox Padding="5" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-        </Grid>
-        <Grid Margin="100 50 100 0" >
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="100"/>
-            </Grid.ColumnDefinitions>
+                        <TextBlock   Text="Reference ID" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBox Padding="5" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                    </Grid>
+                    <Grid Margin="100 50 100 0" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
 
-            <TextBlock   Text="Customer ID" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBox Padding="5" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-            <Button Grid.Column="2" Content="Search"/>
-        </Grid>
-        <Grid Margin="110 50 100 0" >
-            <TextBlock   Text="Complaint Method" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        </Grid>
-        <Grid Margin="100 10 100 0">
-            <Border BorderThickness="2" BorderBrush="Black" Padding="20">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="20"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="100"/>
-                    </Grid.RowDefinitions>
+                        <TextBlock   Text="Customer ID" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBox Padding="5" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                        <Button Grid.Column="2" Content="Search"/>
+                    </Grid>
+                    <Grid Margin="110 50 100 0" >
+                        <TextBlock   Text="Complaint Method" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    </Grid>
+                    <Grid Margin="100 10 100 0">
+                        <Border BorderThickness="2" BorderBrush="Black" Padding="20">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="20"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="100"/>
+                                </Grid.RowDefinitions>
 
-                    <RadioButton Style="{StaticResource {x:Type ToggleButton}}" Content="By Call" Grid.Column="0" />
-                    <RadioButton Style="{StaticResource {x:Type ToggleButton}}" Content="In Person" Grid.Column="2" />
-                </Grid>
-            </Border>
-        </Grid>
-        <Grid Margin="110 50 100 0" >
-            <TextBlock   Text="Complaint Type" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        </Grid>
-        <Grid Margin="100 10 100 0">
-            <Border BorderThickness="2" BorderBrush="Black" Padding="20">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="20"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="100"/>
-                    </Grid.RowDefinitions>
+                                <RadioButton Style="{StaticResource {x:Type ToggleButton}}" Content="By Call" Grid.Column="0" />
+                                <RadioButton Style="{StaticResource {x:Type ToggleButton}}" Content="In Person" Grid.Column="2" />
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <Grid Margin="110 50 100 0" >
+                        <TextBlock   Text="Complaint Type" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    </Grid>
+                    <Grid Margin="100 10 100 0">
+                        <Border BorderThickness="2" BorderBrush="Black" Padding="20">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="20"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="100"/>
+                                </Grid.RowDefinitions>
 
-                    <RadioButton Style="{StaticResource {x:Type ToggleButton}}" Content="Staff Complaint" Grid.Column="0" />
-                    <RadioButton Style="{StaticResource {x:Type ToggleButton}}" Content="Item Complaint" Grid.Column="2" />
-                </Grid>
-            </Border>
+                                <RadioButton Style="{StaticResource {x:Type ToggleButton}}" Content="Staff Complaint" Grid.Column="0" />
+                                <RadioButton Style="{StaticResource {x:Type ToggleButton}}" Content="Item Complaint" Grid.Column="2" />
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <Grid Margin="100 100 50 0">
+                        <Button Width="100" HorizontalAlignment="Right" Padding="5" Content="Next" />
+                    </Grid>
+                    
+                </StackPanel>
+            </Grid>
+            
         </Grid>
         
-        
-    </StackPanel>
+    </Grid>
 </Window>
