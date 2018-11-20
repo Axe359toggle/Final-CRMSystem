@@ -112,7 +112,7 @@ namespace Final_CRMSystem
 
                     if ( rows > 0)
                     {
-                        MessageBox.Show("Data inserted Successfully", "Success", MessageBoxButton.OK, MessageBoxImage.Information)
+                        MessageBox.Show("Data inserted Successfully", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
                         
                         //open next window
                     }
