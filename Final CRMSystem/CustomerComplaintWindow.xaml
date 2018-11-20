@@ -39,7 +39,7 @@
                         </Grid.ColumnDefinitions>
 
                         <TextBlock Text="Complaint ID" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <TextBox x:Name="compID_txt" Padding="5" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                        <TextBox x:Name="compID_txt" Padding="5" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" IsReadOnly="True"/>
                     </Grid>
                     <Grid Margin="50 20 50 0" >
                         <Grid.ColumnDefinitions>

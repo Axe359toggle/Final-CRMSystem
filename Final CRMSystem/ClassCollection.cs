@@ -133,7 +133,7 @@ namespace Final_CRMSystem
         public Database()
         {
             con = new SqlConnection();
-            con.ConnectionString = "Data Source=DESKTOP-99OKMBM;Initial Catalog=testingdb;Integrated Security=True";
+            con.ConnectionString = "Data Source=DESKTOP-99OKMBM;Initial Catalog=CRMdb;Integrated Security=True";
         }
 
         public void openCon()
@@ -269,6 +269,74 @@ namespace Final_CRMSystem
             }
             catch (Exception ex)
             { MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error); }
+        }
+
+    }
+
+    static class CRMdbData
+    {
+        internal static class Location
+        {
+            static class location_id
+            {
+                internal static string size = "5";
+            }
+            static class location_addr
+            {
+                internal static string size = "200";
+            }
+            static class location_type
+            {
+                internal static string size = "12";
+            }
+        }
+        internal static class Complaint
+        {
+            static class comp_id
+            {
+                internal static string size = "8";
+            }
+            static class comp_type
+            {
+                internal static string size = "8";
+            }
+        }
+        internal static class Customer
+        {
+            static class cus_id
+            {
+                internal static string size = "7";
+            }
+            static class cus_name
+            {
+                internal static string size = "50";
+            }
+            static class cus_tp
+            {
+                internal static string size = "12";
+            }
+            static class cus_email
+            {
+                internal static string size = "200";
+            }
+        }
+        internal static class CustomerComplaint
+        {
+            static class comp_method
+            {
+                internal static string size = "9";
+            }
+            static class cus_comp_type
+            {
+                internal static string size = "5";
+            }
+        }
+        internal static class Reference
+        {
+            static class ref_id
+            {
+                internal static string minsize = "8";
+            }
         }
 
     }
