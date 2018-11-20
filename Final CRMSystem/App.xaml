@@ -5,5 +5,7 @@
              StartupUri="Customer_Details.xaml">
     <Application.Resources>
         <BitmapImage x:Key="backButtonImage" UriSource="/Resources/icons8_Back_To_96px.png" />
+        <BitmapImage x:Key="notifyCorrectImage" UriSource="/Resources/icons8_Checked_96px.png" />
+        <BitmapImage x:Key="notifyErrorImage" UriSource="/Resources/icons8_High_Priority_96px.png" />
     </Application.Resources>
 </Application>

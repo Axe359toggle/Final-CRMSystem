@@ -277,65 +277,65 @@ namespace Final_CRMSystem
     {
         internal static class Location
         {
-            static class location_id
+            internal static class location_id
             {
-                internal static string size = "5";
+                internal static int size = 5;
             }
-            static class location_addr
+            internal static class location_addr
             {
-                internal static string size = "200";
+                internal static int size = 200;
             }
-            static class location_type
+            internal static class location_type
             {
-                internal static string size = "12";
+                internal static int size = 12;
             }
         }
         internal static class Complaint
         {
-            static class comp_id
+            internal static class comp_id
             {
-                internal static string size = "8";
+                internal static int size = 8;
             }
-            static class comp_type
+            internal static class comp_type
             {
-                internal static string size = "8";
+                internal static int size = 8;
             }
         }
         internal static class Customer
         {
-            static class cus_id
+            internal static class cus_id
             {
-                internal static string size = "7";
+                internal static int size = 7;
             }
-            static class cus_name
+            internal static class cus_name
             {
-                internal static string size = "50";
+                internal static int size = 50;
             }
-            static class cus_tp
+            internal static class cus_tp
             {
-                internal static string size = "12";
+                internal static int size = 12;
             }
-            static class cus_email
+            internal static class cus_email
             {
-                internal static string size = "200";
+                internal static int size = 200;
             }
         }
         internal static class CustomerComplaint
         {
-            static class comp_method
+            internal static class comp_method
             {
-                internal static string size = "9";
+                internal static int size = 9;
             }
-            static class cus_comp_type
+            internal static class cus_comp_type
             {
-                internal static string size = "5";
+                internal static int size = 5;
             }
         }
         internal static class Reference
         {
-            static class ref_id
+            internal static class ref_id
             {
-                internal static string minsize = "8";
+                internal static int minsize = 8;
             }
         }
 
