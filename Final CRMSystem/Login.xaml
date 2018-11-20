@@ -19,13 +19,13 @@
             <StackPanel VerticalAlignment="Center" Grid.Column="1">
                 <Grid Margin="0 20 0 20">
                     
-                    <TextBox VerticalAlignment="Center" Padding="10 5 10 5"  x:Name="SearchTermTextBox" />
+                    <TextBox x:Name="uname_txt" VerticalAlignment="Center" Padding="10 5 10 5" />
                     <TextBlock IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Center" Text="Username" Padding="10 5 10 5"  Foreground="DarkGray">
                         <TextBlock.Style>
                             <Style TargetType="{x:Type TextBlock}">
                                 <Setter Property="Visibility" Value="Collapsed"/>
                                 <Style.Triggers>
-                                    <DataTrigger Binding="{Binding Text, ElementName=SearchTermTextBox}" Value="">
+                                    <DataTrigger Binding="{Binding Text, ElementName=uname_txt}" Value="">
                                         <Setter Property="Visibility" Value="Visible"/>
                                     </DataTrigger>
                                 </Style.Triggers>
@@ -33,9 +33,9 @@
                         </TextBlock.Style>
                     </TextBlock>
                 </Grid>
-                <PasswordBox Margin="0 20 0 20" HorizontalAlignment="Stretch" Padding="10 5 10 5"/>
-                <Button Margin="0 20 0 20" HorizontalAlignment="Center" Padding="10 0" Content="Login"/>
-                <Label HorizontalAlignment="Center" Content="Forgot password?" Background="White" Foreground="Blue"/>
+                <PasswordBox x:Name="upass_txt" Margin="0 20 0 20" HorizontalAlignment="Stretch" Padding="10 5 10 5"/>
+                <Button x:Name="login_btn" Margin="0 20 0 20" HorizontalAlignment="Center" Padding="10 0" Content="Login" Click="login_btn_Click"/>
+                <Label x:Name="forgot_lbl" HorizontalAlignment="Center" Content="Forgot password?" Background="White" Foreground="Blue"/>
             </StackPanel>
 
 

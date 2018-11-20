@@ -24,5 +24,14 @@ namespace Final_CRMSystem
         {
             InitializeComponent();
         }
+
+        private void login_btn_Click(object sender, RoutedEventArgs e)
+        {
+            string uname = uname_txt.Text;
+            string upass = upass_txt.Password;
+
+            Database db = new Database();
+            string query;
+        }
     }
 }
