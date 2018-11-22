@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Interfaces_new
+namespace Final_CRMSystem
 {
     /// <summary>
     /// Interaction logic for HQ_Manager_Dashboard.xaml
@@ -26,9 +26,12 @@ namespace Interfaces_new
 
         private void btn_insert_Click(object sender, RoutedEventArgs e)
         {
-            var insert = new HQ_insert_Dashboard();
-            insert.Show();
-            
+            Login.b1.addWindowAndOpenNextWindow(this, new HQ_insert_Dashboard());
+        }
+
+        private void back_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Login.b1.goBack();
         }
     }
 }

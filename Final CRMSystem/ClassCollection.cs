@@ -273,6 +273,22 @@ namespace Final_CRMSystem
 
     }
 
+    static class Password
+    {
+        internal static string sha256(string randomString)
+        {
+            randomString = " TheCRMSystem" + randomString;
+            var crypt = new System.Security.Cryptography.SHA256Managed();
+            var hash = new System.Text.StringBuilder();
+            byte[] crypto = crypt.ComputeHash(Encoding.UTF8.GetBytes(randomString));
+            foreach (byte theByte in crypto)
+            {
+                hash.Append(theByte.ToString("x2"));
+            }
+            return hash.ToString();
+        }
+    }
+
     static class CRMdbData
     {
         internal static class Location
@@ -288,6 +304,40 @@ namespace Final_CRMSystem
             internal static class location_type
             {
                 internal static int size = 12;
+            }
+        }
+        internal static class Designation
+        {
+            internal static class des_id
+            {
+                internal static int size = 1;
+            }
+            internal static class desName
+            {
+                internal static int size = 20;
+            }
+        }
+        internal static class Manager
+        {
+            internal static class emp_id
+            {
+                internal static int size = 6;
+            }
+            internal static class emp_title
+            {
+                internal static int size = 5;
+            }
+            internal static class emp_fullname
+            {
+                internal static int size = 100;
+            }
+            internal static class emp_addr
+            {
+                internal static int size = 200;
+            }
+            internal static class emp_email
+            {
+                internal static int size = 100;
             }
         }
         internal static class Complaint
@@ -317,7 +367,7 @@ namespace Final_CRMSystem
             }
             internal static class cus_email
             {
-                internal static int size = 200;
+                internal static int size = 100;
             }
         }
         internal static class CustomerComplaint
@@ -336,6 +386,21 @@ namespace Final_CRMSystem
             internal static class ref_id
             {
                 internal static int minsize = 8;
+            }
+        }
+        internal static class Login
+        {
+            internal static class login_id
+            {
+                internal static int size = 6;
+            }
+            internal static class emp_username
+            {
+                internal static int size = 30;
+            }
+            internal static class emp_pass
+            {
+                internal static int size = 64;
             }
         }
 

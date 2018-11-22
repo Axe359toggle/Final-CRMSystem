@@ -44,7 +44,7 @@ namespace Final_CRMSystem
                 Database db = new Database();
                 string query = "select case when MAX(comp_id) is null then '10000000' else MAX(comp_id) END as comp_id from Complaint";
                 compID = db.ReadData(query, "comp_id");
-                compID_txt.Text = compID;
+                compID_txt.Text = (Int16.Parse(compID)+1).ToString() ;
             }
             catch (SqlException ex)
             {
@@ -100,12 +100,12 @@ namespace Final_CRMSystem
 
                     if(relShrmID_txt.Text.Trim().Length==0)
                     {
-                        query = "INSERT INTO Complaint (comp_id,comp_type,ref_id) values('" + compID + "','" + compType1 + "','" + refID + "') INSERT INTO CustomerComplaint (comp_id,cus_id,comp_method,cus_comp_type) values('" + compID + "','" + cusID + "','" + compType2 + "')";
+                        query = "INSERT INTO Complaint (comp_id,comp_type,ref_id) values('" + compID + "','" + compType1 + "','" + refID + "') INSERT INTO CustomerComplaint (comp_id,cus_id,comp_method,cus_comp_type) values('" + compID + "','" + cusID + "','"+compMethod+"','" + compType2 + "')";
                     }
                     else
                     {
                         relShrmID = relShrmID_txt.Text.Trim();
-                        query = "INSERT INTO Complaint (comp_id,comp_type,ref_id) values('" + compID + "','" + compType1 + "','" + refID + "') INSERT INTO CustomerComplaint (comp_id,cus_id,comp_method,cus_comp_type,related_showroom) values('" + compID + "','" + cusID + "','" + compType2 + "','"+ relShrmID +"')";
+                        query = "INSERT INTO Complaint (comp_id,comp_type,ref_id) values('" + compID + "','" + compType1 + "','" + refID + "') INSERT INTO CustomerComplaint (comp_id,cus_id,comp_method,cus_comp_type,related_showroom) values('" + compID + "','" + cusID + "','"+compMethod+"','" + compType2 + "','"+ relShrmID +"')";
                     }
 
                     int rows = db.Save_Del_Update(query);
@@ -113,7 +113,15 @@ namespace Final_CRMSystem
                     if ( rows > 0)
                     {
                         MessageBox.Show("Data inserted Successfully", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-                        
+
+                        if (staffComp_rbn.IsChecked == true)
+                        {
+
+                        }
+                        else if (itemComp_rbn.IsChecked == true)
+                        {
+
+                        }
                         //open next window
                     }
                     

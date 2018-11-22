@@ -88,8 +88,8 @@
     <Compile Include="Item_Details.xaml.cs">
       <DependentUpon>Item_Details.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Log_Details.xaml.cs">
-      <DependentUpon>Log_Details.xaml</DependentUpon>
+    <Compile Include="Login_Details.xaml.cs">
+      <DependentUpon>Login_Details.xaml</DependentUpon>
     </Compile>
     <Compile Include="Rebate_Payment.xaml.cs">
       <DependentUpon>Rebate_Payment.xaml</DependentUpon>
@@ -168,7 +168,7 @@
       <DependentUpon>Login.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Log_Details.xaml">
+    <Page Include="Login_Details.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Interfaces_new
+namespace Final_CRMSystem
 {
     /// <summary>
     /// Interaction logic for HQ_insert_Dashboard.xaml
@@ -14,9 +14,14 @@ namespace Interfaces_new
 
         private void btn_LoginDetails_Click(object sender, RoutedEventArgs e)
         {
-            var ld = new Log_Details();
+            var ld = new Login_Details();
             ld.Show();
            
+        }
+
+        private void back_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Login.b1.goBack();
         }
     }
 }

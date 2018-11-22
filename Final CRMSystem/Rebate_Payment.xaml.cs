@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Interfaces_new
+namespace Final_CRMSystem
 {
     /// <summary>
     /// Interaction logic for Rebate_Payment.xaml

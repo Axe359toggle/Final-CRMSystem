@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using System.Data.SqlClient;
+
 namespace Final_CRMSystem
 {
     /// <summary>
@@ -20,6 +22,8 @@ namespace Final_CRMSystem
     /// </summary>
     public partial class Login : Window
     {
+        internal static BackButton b1;
+
         public Login()
         {
             InitializeComponent();
@@ -27,11 +31,44 @@ namespace Final_CRMSystem
 
         private void login_btn_Click(object sender, RoutedEventArgs e)
         {
-            string uname = uname_txt.Text;
-            string upass = upass_txt.Password;
+            try
+            {
+                string uname = uname_txt.Text;
+                string upass = Password.sha256(upass_txt.Password);
+                string desID;
 
-            Database db = new Database();
-            string query;
+                Database db = new Database();
+                string query = "SELECT des_id from Login where emp_username = '" + uname + "' and emp_pass='" + upass + "' ";
+                desID = db.ReadData(query, "des_id");
+                
+
+                if (desID.Equals("H"))
+                {
+                    MessageBox.Show("Login Successful");
+                    b1 = new BackButton();
+                    b1.addWindowAndOpenNextWindow(this, new HQ_Manager_Dashboard());
+                }
+                else if (desID.Equals("S"))
+                {
+                    MessageBox.Show("Login Successful");
+                    b1 = new BackButton();
+                    b1.addWindowAndOpenNextWindow(this, new Showroom_Manager_Mainmenu());
+                }
+                else
+                {
+                    MessageBox.Show("Login Failed");
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString(), "SQL Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            
+
         }
     }
 }
