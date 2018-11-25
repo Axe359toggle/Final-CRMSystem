@@ -19,9 +19,9 @@ namespace Final_CRMSystem
     /// <summary>
     /// Interaction logic for CustomerComplaintWindow.xaml
     /// </summary>
-    public partial class CustomerComplaintWindow : Window
+    public partial class Customer_Complaint_Window : Window
     {
-        public CustomerComplaintWindow()
+        public Customer_Complaint_Window()
         {
             InitializeComponent();
             setCompID();

@@ -58,8 +58,8 @@
     <Compile Include="CommonControlPanel.xaml.cs">
       <DependentUpon>CommonControlPanel.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CustomerComplaintWindow.xaml.cs">
-      <DependentUpon>CustomerComplaintWindow.xaml</DependentUpon>
+    <Compile Include="Customer_Complaint_Window.xaml.cs">
+      <DependentUpon>Customer_Complaint_Window.xaml</DependentUpon>
     </Compile>
     <Compile Include="Customer_Complaint.xaml.cs">
       <DependentUpon>Customer_Complaint.xaml</DependentUpon>
@@ -116,7 +116,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CustomerComplaintWindow.xaml">
+    <Page Include="Customer_Complaint_Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
