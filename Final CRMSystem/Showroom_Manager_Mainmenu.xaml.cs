@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Interfaces_new
+namespace Final_CRMSystem
 {
     /// <summary>
     /// Interaction logic for Showroom_Manager_Dashboard.xaml
@@ -24,10 +24,6 @@ namespace Interfaces_new
             InitializeComponent();
         }
 
-        private void btn_cusComplaint_Click_1(object sender, RoutedEventArgs e)
-        {
-            Customer_Complaint cc = new Customer_Complaint();
-            cc.Show();
-        }
+      
     }
 }

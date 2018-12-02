@@ -15,15 +15,13 @@ using System.Windows.Shapes;
 namespace Final_CRMSystem
 {
     /// <summary>
-    /// Interaction logic for HQ_Manager_Dashboard.xaml
+    /// Interaction logic for Choose_Factory.xaml
     /// </summary>
-    public partial class HQ_Manager_Dashboard : Window
+    public partial class Choose_Factory : Window
     {
-        public HQ_Manager_Dashboard()
+        public Choose_Factory()
         {
             InitializeComponent();
         }
-
-       
     }
 }

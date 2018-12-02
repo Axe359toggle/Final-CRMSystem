@@ -15,15 +15,13 @@ using System.Windows.Shapes;
 namespace Final_CRMSystem
 {
     /// <summary>
-    /// Interaction logic for HQ_Manager_Dashboard.xaml
+    /// Interaction logic for Batch_Item_Complaint.xaml
     /// </summary>
-    public partial class HQ_Manager_Dashboard : Window
+    public partial class Batch_Item_Complaint : Window
     {
-        public HQ_Manager_Dashboard()
+        public Batch_Item_Complaint()
         {
             InitializeComponent();
         }
-
-       
     }
 }

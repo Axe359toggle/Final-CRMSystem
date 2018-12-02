@@ -31,7 +31,7 @@ namespace Final_CRMSystem
             string upass = upass_txt.Password;
 
             Database db = new Database();
-            string query;
+           
         }
     }
 }

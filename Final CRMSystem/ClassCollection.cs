@@ -133,7 +133,7 @@ namespace Final_CRMSystem
         public Database()
         {
             con = new SqlConnection();
-            con.ConnectionString = "Data Source=DESKTOP-99OKMBM;Initial Catalog=CRMdb;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-MMJ0C0M\SQLEXPRESS;Initial Catalog=CRMdb;Integrated Security=True";
         }
 
         public void openCon()

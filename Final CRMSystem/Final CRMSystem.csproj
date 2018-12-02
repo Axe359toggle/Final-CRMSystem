@@ -54,6 +54,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Batch Item Complaint.xaml.cs">
+      <DependentUpon>Batch Item Complaint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Choose_Factory.xaml.cs">
+      <DependentUpon>Choose_Factory.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ClassCollection.cs" />
     <Compile Include="CommonControlPanel.xaml.cs">
       <DependentUpon>CommonControlPanel.xaml</DependentUpon>
@@ -100,6 +106,9 @@
     <Compile Include="Receive_Item.xaml.cs">
       <DependentUpon>Receive_Item.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Repair.xaml.cs">
+      <DependentUpon>Repair.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Search_Complaints.xaml.cs">
       <DependentUpon>Search_Complaints.xaml</DependentUpon>
     </Compile>
@@ -112,6 +121,14 @@
     <Compile Include="Staff_Complaint.xaml.cs">
       <DependentUpon>Staff_Complaint.xaml</DependentUpon>
     </Compile>
+    <Page Include="Batch Item Complaint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Choose_Factory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CommonControlPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -183,6 +200,10 @@
     <Page Include="Receive_Item.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Repair.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Search_Complaints.xaml">
       <Generator>MSBuild:Compile</Generator>

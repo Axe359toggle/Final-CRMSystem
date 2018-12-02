@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Interfaces_new
+namespace Final_CRMSystem
 {
     /// <summary>
     /// Interaction logic for ReceivedItem_Details.xaml
@@ -21,8 +21,6 @@ namespace Interfaces_new
     {
         public ReceivedItem_Details()
         {
-            this.Visibility = Visibility.Collapsed;
-            this.Visibility = Visibility.Visible;
             InitializeComponent();
            
         }
