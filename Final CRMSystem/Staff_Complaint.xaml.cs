@@ -19,9 +19,22 @@ namespace Final_CRMSystem
     /// </summary>
     public partial class Staff_Complaint : Window
     {
+        string compID;
+
         public Staff_Complaint()
         {
             InitializeComponent();
+        }
+
+        public Staff_Complaint(string compID1)
+        {
+            InitializeComponent();
+            compID = compID1;
+        }
+
+        private void back_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Login.b1.goBack();
         }
     }
 }

@@ -19,9 +19,26 @@ namespace Final_CRMSystem
     /// </summary>
     public partial class Item_Complaint : Window
     {
+        string compID;
         public Item_Complaint()
         {
             InitializeComponent();
+        }
+
+        public Item_Complaint(string compID1)
+        {
+            InitializeComponent();
+            txt_compId.Text = compID1;
+        }
+
+        private void back_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Login.b1.goBack();
+        }
+
+        private void btn_insert_Click(object sender, RoutedEventArgs e)
+        {
+            Login.b1.addWindowAndOpenNextWindow(this, new Delivery());
         }
     }
 }

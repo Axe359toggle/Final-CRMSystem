@@ -116,11 +116,11 @@ namespace Final_CRMSystem
 
                         if (staffComp_rbn.IsChecked == true)
                         {
-
+                            Login.b1.addWindowAndOpenNextWindow(this, new Staff_Complaint(compID));
                         }
                         else if (itemComp_rbn.IsChecked == true)
                         {
-
+                            Login.b1.addWindowAndOpenNextWindow(this, new Item_Complaint(compID));
                         }
                         //open next window
                     }

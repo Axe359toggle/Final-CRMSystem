@@ -33,21 +33,22 @@ namespace Final_CRMSystem
             InitializeComponent();
         }
 
-        public Login_Details(char option , string empID)
+        public Login_Details(string empID1)
+        {
+            InitializeComponent();
+            empID_txt.Text = empID1;
+            insert_rbn.IsChecked = true;
+        }
+
+        public Login_Details(string empID1 , string loginID1)
         {
             InitializeComponent();
 
-            empID_txt.Text = empID;
+            empID_txt.Text = empID1;
+            loginID_txt.Text = loginID1;
 
-            if (option.Equals("i"))
-            {
-                insert_rbn.IsChecked = true;
-            }
-            else if (option.Equals("u"))
-            {
-                update_rbn.IsChecked = true;
-                insert_rbn.IsEnabled = false;
-            }
+            update_rbn.IsChecked = true;
+            insert_rbn.IsEnabled = false;
         }
 
         private void setInsert(bool value)
@@ -95,15 +96,22 @@ namespace Final_CRMSystem
 
 
                             string query = "insert into login (login_id,emp_username,emp_pass,des_id) values ('" + loginID + "','" + uName + "','" + newPass + "','" + desID + "')   ";
+
+                            string query2 = "update Manager set login_id ='" + loginID + "' where emp_id='" + empID + "'";
+                            query = query + query2;
+
                             Database db = new Database();
                             int rows = db.Save_Del_Update(query);
 
                             if (rows > 0)
                             {
                                 MessageBox.Show("Data inserted Successfully", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-
                                 
                                 //open next window
+                            }
+                            else
+                            {
+                                MessageBox.Show("Data insertion failed", "Error", MessageBoxButton.OK, MessageBoxImage.Exclamation);
                             }
                         }
                     }
@@ -295,6 +303,11 @@ namespace Final_CRMSystem
             
 
             return check;
+        }
+
+        private void clearText()
+        {
+
         }
     }
 }

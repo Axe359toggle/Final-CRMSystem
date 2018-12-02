@@ -95,6 +95,12 @@ namespace Final_CRMSystem
             Window1.Hide();
 
         }
+
+        public void removePreviousWindow()
+        {
+            previousWindows[noOfWindows] = null;
+            noOfWindows--;
+        }
         ~BackButton() { }
     }
 
