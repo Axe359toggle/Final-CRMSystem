@@ -215,7 +215,7 @@
         </Grid>
         <Grid Grid.Row="3">
             <Grid Grid.Row="2" Margin="100 10 50 20">
-                <Button x:Name="ok_btn" Width="100" HorizontalAlignment="Right" Padding="5" Content="Ok" Click="next_btn_Click" />
+                <Button x:Name="ok_btn" Width="100" HorizontalAlignment="Right" Padding="5" Content="Ok" />
             </Grid>
         </Grid>
 
