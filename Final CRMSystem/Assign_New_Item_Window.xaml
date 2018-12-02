@@ -142,7 +142,7 @@
         </Grid>
 
         <Grid Grid.Row="2" Margin="100 10 50 20">
-            <Button x:Name="next_btn" Width="100" HorizontalAlignment="Right" Padding="5" Content="Next" Click="next_btn_Click" />
+            <Button x:Name="next_btn" Width="100" HorizontalAlignment="Right" Padding="5" Content="Next" />
         </Grid>
 
     </Grid>
