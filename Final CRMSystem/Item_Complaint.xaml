@@ -18,7 +18,7 @@
                 <ColumnDefinition Width="52"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="back_btn" Width="52" Height="52" Background="Transparent" Grid.Column="0">
+            <Button x:Name="back_btn" Width="52" Height="52" Background="Transparent" Grid.Column="0" Click="back_btn_Click">
                 <DockPanel>
                     <Image Source="{StaticResource backButtonImage}"/>
                 </DockPanel>
@@ -95,7 +95,7 @@
                         <CheckBox Background="AliceBlue"  Padding="5" x:Name="chk_itemReceived" Margin="0 60 0 0" >Item Received</CheckBox>
                     </StackPanel>
                     <StackPanel Grid.Column="3">
-                        <Button x:Name="btn_insert" Padding="5"  Margin="0 200 10 0" Content="Ok" FontWeight="ExtraBlack" FontSize="15"/>
+                        <Button x:Name="btn_insert" Padding="5"  Margin="0 200 10 0" Content="Ok" FontWeight="ExtraBlack" FontSize="15" Click="btn_insert_Click"/>
                     </StackPanel>
                     <DatePicker HorizontalAlignment="Left" Height="28" Width="208" Margin="203,226,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" />
                 </Grid>

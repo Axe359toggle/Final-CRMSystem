@@ -24,6 +24,14 @@ namespace Final_CRMSystem
             InitializeComponent();
         }
 
-       
+        private void btn_insert_Click(object sender, RoutedEventArgs e)
+        {
+            Login.b1.addWindowAndOpenNextWindow(this, new HQ_insert_Dashboard());
+        }
+
+        private void back_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Login.b1.goBack();
+        }
     }
 }

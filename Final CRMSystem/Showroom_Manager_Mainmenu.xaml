@@ -18,7 +18,7 @@
                 <ColumnDefinition Width="52"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="back_btn" Width="52" Height="52" Background="Transparent" Grid.Column="0">
+            <Button x:Name="back_btn" Width="52" Height="52" Background="Transparent" Grid.Column="0" Click="back_btn_Click">
                 <DockPanel>
                     <Image Source="{StaticResource backButtonImage}"/>
                 </DockPanel>
@@ -40,7 +40,7 @@
                                 <ColumnDefinition Width="9*"/>
                             </Grid.ColumnDefinitions>
                             <StackPanel Grid.Column="0">
-                                <Button x:Name="btn_cusComplaint" Foreground="Black" FontFamily="ALGERIAN" FontSize="30" Content="Make Customer Complaint" Height="83" Margin="105,51,-603,0" VerticalAlignment="Top" Background="DarkOrange"/>
+                                <Button x:Name="btn_cusComplaint" Foreground="Black" FontFamily="ALGERIAN" FontSize="30" Content="Make Customer Complaint" Height="83" Margin="105,51,-603,0" VerticalAlignment="Top" Background="DarkOrange" Click="btn_cusComplaint_Click"/>
                             </StackPanel>
                         </Grid>
                         <Grid Margin="10 0 10 10">

@@ -64,8 +64,8 @@
     <Compile Include="CommonControlPanel.xaml.cs">
       <DependentUpon>CommonControlPanel.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CustomerComplaintWindow.xaml.cs">
-      <DependentUpon>CustomerComplaintWindow.xaml</DependentUpon>
+    <Compile Include="Customer_Complaint_Window.xaml.cs">
+      <DependentUpon>Customer_Complaint_Window.xaml</DependentUpon>
     </Compile>
     <Compile Include="Customer_Complaint.xaml.cs">
       <DependentUpon>Customer_Complaint.xaml</DependentUpon>
@@ -94,8 +94,11 @@
     <Compile Include="Item_Details.xaml.cs">
       <DependentUpon>Item_Details.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Log_Details.xaml.cs">
-      <DependentUpon>Log_Details.xaml</DependentUpon>
+    <Compile Include="Login_Details.xaml.cs">
+      <DependentUpon>Login_Details.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_Details_window.xaml.cs">
+      <DependentUpon>Manager_Details_window.xaml</DependentUpon>
     </Compile>
     <Compile Include="Rebate_Payment.xaml.cs">
       <DependentUpon>Rebate_Payment.xaml</DependentUpon>
@@ -133,7 +136,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CustomerComplaintWindow.xaml">
+    <Page Include="Customer_Complaint_Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -185,9 +188,13 @@
       <DependentUpon>Login.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Log_Details.xaml">
+    <Page Include="Login_Details.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Manager_Details_window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Rebate_Payment.xaml">
       <Generator>MSBuild:Compile</Generator>

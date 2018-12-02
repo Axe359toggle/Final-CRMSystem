@@ -24,6 +24,14 @@ namespace Final_CRMSystem
             InitializeComponent();
         }
 
-      
+        private void btn_cusComplaint_Click(object sender, RoutedEventArgs e)
+        {
+            Login.b1.addWindowAndOpenNextWindow(this, new Customer_Complaint_Window());
+        }
+
+        private void back_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Login.b1.goBack();
+        }
     }
 }

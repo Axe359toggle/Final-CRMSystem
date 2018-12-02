@@ -12,7 +12,17 @@ namespace Final_CRMSystem
             InitializeComponent();
         }
 
-        
+        private void btn_LoginDetails_Click(object sender, RoutedEventArgs e)
+        {
+            var ld = new Login_Details();
+            ld.Show();
+           
+        }
+
+        private void back_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Login.b1.goBack();
+        }
     }
 }
 
