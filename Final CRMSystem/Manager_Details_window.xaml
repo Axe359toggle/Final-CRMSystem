@@ -5,19 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Final_CRMSystem"
         mc:Ignorable="d"
-        Title="Manager_Details_window" Height="750" Width="1600">
+        Title="Manager_Details_window" Height="750" Width="1400">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="52"/>
+            <RowDefinition Height="{StaticResource panelRowSize}"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Height="52">
+        <Grid Grid.Row="0" Height="{StaticResource panelSize}">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="52"/>
+                <ColumnDefinition Width="{StaticResource panelRowSize}"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="back_btn" Width="52" Height="52" Background="Transparent" Grid.Column="0">
+            <Button x:Name="back_btn" Width="{StaticResource panelSize}" Height="{StaticResource panelSize}" Background="Transparent" Grid.Column="0" Click="back_btn_Click">
                 <DockPanel>
                     <Image Source="{StaticResource backButtonImage}"/>
                 </DockPanel>
@@ -95,11 +95,11 @@
                                 <ColumnDefinition Width="100"/>
                             </Grid.ColumnDefinitions>
 
-                            <CheckBox x:Name="chkAddress" Content="Address" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                            <TextBox x:Name="txtAddress" Padding="5" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                            <CheckBox x:Name="chkTp" Content="Telephone" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBox x:Name="txtTp" Padding="5" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
                             <Grid Grid.Column="2">
                                 <DockPanel Height="30" Width="30" VerticalAlignment="Center">
-                                    <Image x:Name="addressNotify"/>
+                                    <Image x:Name="tpNotify"/>
                                 </DockPanel>
                             </Grid>
 
@@ -186,7 +186,7 @@
                                         <DataGridTextColumn Header="Manager ID" Binding="{Binding emp_id}" />
                                         <DataGridTextColumn Header="Title" Binding="{Binding emp_title}" />
                                         <DataGridTextColumn Header="Full Name" Binding="{Binding emp_fullname}" />
-                                        <DataGridTextColumn Header="Address" Binding="{Binding emp_addr}" />
+                                        <DataGridTextColumn Header="Address" Binding="{Binding emp_tp}" />
                                         <DataGridTextColumn Header="Email" Binding="{Binding emp_email}" />
                                         <DataGridTextColumn Header="Designation ID" Binding="{Binding des_id}" />
                                         <DataGridTextColumn Header="Login ID" Binding="{Binding login_id}" />
@@ -207,8 +207,10 @@
                                     <DataGrid.Columns>
 
                                         <DataGridTextColumn Header="Logged In Date" Binding="{Binding login_dt,  StringFormat={}{0:yyyy-MM-dd}}"/>
+                                        <DataGridTextColumn Header="Logged In Time" Binding="{Binding login_dt,  StringFormat={}{0:HH:mm:ss}}"/>
 
                                         <DataGridTextColumn Header="Logged Out Date" Binding="{Binding logout_dt,  StringFormat={}{0:yyyy-MM-dd}}" />
+                                        <DataGridTextColumn Header="Logged Out Time" Binding="{Binding logout_dt,  StringFormat={}{0:HH:mm:ss}}" />
 
                                     </DataGrid.Columns>
                                 </DataGrid>
@@ -234,14 +236,14 @@
                             </Grid.ColumnDefinitions>
 
                             <CheckBox x:Name="chkLocation" Content="Location ID" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                            <TextBox x:Name="txtlocationID" Padding="5" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                            <TextBox x:Name="txtlocationID" Padding="5" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" IsReadOnly="True"/>
                             <Grid Grid.Column="2">
                                 <DockPanel Height="30" Width="30" VerticalAlignment="Center">
                                     <Image x:Name="locationIDNotify"/>
                                 </DockPanel>
                             </Grid>
                             <Button x:Name="btnLocationSearch" Grid.Column="3" Content="Search"/>
-                            <Button x:Name="btnLocationAdd" Grid.Column="5" Content="Add" IsEnabled="False"/>
+                            <Button x:Name="btnLocationAdd" Grid.Column="5" Content="Add" IsEnabled="False" Click="btnLocationAdd_Click"/>
                         </Grid>
                         <Grid Margin="50 10 50 0" >
                             <Grid HorizontalAlignment="Center">

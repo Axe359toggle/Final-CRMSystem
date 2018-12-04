@@ -107,7 +107,12 @@ namespace Final_CRMSystem
 
 
         }
+
+        private void back_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Login.b1.goBack(this);
         }
+    }
                
 }
 

@@ -303,9 +303,21 @@ namespace Final_CRMSystem
             {
                 internal static int size = 5;
             }
-            internal static class location_addr
+            internal static class addr_no
             {
-                internal static int size = 200;
+                internal static int size = 30;
+            }
+            internal static class addr_lane
+            {
+                internal static int size = 100;
+            }
+            internal static class addr_town
+            {
+                internal static int size = 30;
+            }
+            internal static class addr_city
+            {
+                internal static int size = 30;
             }
             internal static class location_type
             {
@@ -337,9 +349,9 @@ namespace Final_CRMSystem
             {
                 internal static int size = 100;
             }
-            internal static class emp_addr
+            internal static class emp_tp
             {
-                internal static int size = 200;
+                internal static int size = 12;
             }
             internal static class emp_email
             {

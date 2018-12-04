@@ -52,7 +52,6 @@ namespace Final_CRMSystem
                         string query2 = "insert into LoginDetails (login_id,login_dt) values ('"+ dt.Rows[0]["login_id"] + "',DEFAULT)  declare @ID int = SCOPE_IDENTITY() Select @ID as logindetail_id";
                         System.Data.DataTable dt1 = db.GetData(query2);
                         logindetailID = dt1.Rows[0]["logindetail_id"].ToString();
-                        MessageBox.Show(logindetailID);
 
                         empID = dt.Rows[0]["emp_id"].ToString();
                         desID = dt.Rows[0]["des_id"].ToString();
