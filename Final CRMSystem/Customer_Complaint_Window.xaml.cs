@@ -44,7 +44,7 @@ namespace Final_CRMSystem
                 Database db = new Database();
                 string query = "select case when MAX(comp_id) is null then '10000000' else MAX(comp_id) END as comp_id from Complaint";
                 compID = db.ReadData(query, "comp_id");
-                compID_txt.Text = (Int16.Parse(compID)+1).ToString() ;
+                compID_txt.Text = (Int32.Parse(compID)+1).ToString() ;
             }
             catch (SqlException ex)
             {
