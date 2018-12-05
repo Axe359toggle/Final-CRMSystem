@@ -31,7 +31,7 @@
         <Grid Grid.Row="1">
             <ScrollViewer>
 
-                <Border Padding="10" Background="LightBlue" CornerRadius="30" Height="584">
+                <Border Padding="10" Background="White" CornerRadius="30" Height="584">
                     <StackPanel>
                         <StackPanel>
                             <TextBlock Text="Repair" HorizontalAlignment="Center"  Foreground="Black" FontWeight="Heavy"  FontStyle="Oblique" FontSize="25" Margin="288,10,0,10" Width="419"/>

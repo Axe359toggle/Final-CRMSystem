@@ -30,7 +30,7 @@
         <Grid Grid.Row="1">
             <ScrollViewer>
 
-                <Border Padding="10" Background="LightPink"  Margin="20,20,20,23" CornerRadius="30">
+                <Border Padding="10" Background="White"  Margin="20,20,20,23" CornerRadius="30">
                     <StackPanel Margin="0,0,0,-10">
                         <TextBlock Text="Received Item" HorizontalAlignment="Left"  Foreground="Black" FontWeight="Heavy"  FontStyle="Oblique" FontSize="25" Margin="304,10,0,10"/>
                         <Grid>

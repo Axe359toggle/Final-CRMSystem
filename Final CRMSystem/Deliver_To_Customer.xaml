@@ -32,7 +32,7 @@
 
 
                 
-                <Border Padding="10" Background="LightBlue"  Margin="25" CornerRadius="30">
+                <Border Padding="10" Background="White"  Margin="25" CornerRadius="30">
         <StackPanel>
             <StackPanel Height="460">
                

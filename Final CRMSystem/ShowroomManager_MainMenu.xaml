@@ -8,7 +8,7 @@
         Title="ShowroomManager_MainMenu" Height="450" Width="800"
         WindowStartupLocation="CenterScreen">
 
-    <Grid>
+    <Grid Margin="0,0,58,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="52"/>
             <RowDefinition Height="1*"/>
@@ -21,7 +21,7 @@
                 <local:CommonControlPanel/>
             </Grid>
         </Grid>
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" Margin="0,0,72,0">
             <Grid VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*"/>

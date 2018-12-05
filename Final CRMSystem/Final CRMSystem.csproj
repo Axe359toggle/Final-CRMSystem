@@ -54,9 +54,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Batch Item Complaint.xaml.cs">
-      <DependentUpon>Batch Item Complaint.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Choose_Factory.xaml.cs">
       <DependentUpon>Choose_Factory.xaml</DependentUpon>
     </Compile>
@@ -94,6 +91,9 @@
     <Compile Include="Item_Details.xaml.cs">
       <DependentUpon>Item_Details.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Location.xaml.cs">
+      <DependentUpon>Location.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Login_Details.xaml.cs">
       <DependentUpon>Login_Details.xaml</DependentUpon>
     </Compile>
@@ -124,10 +124,6 @@
     <Compile Include="Staff_Complaint.xaml.cs">
       <DependentUpon>Staff_Complaint.xaml</DependentUpon>
     </Compile>
-    <Page Include="Batch Item Complaint.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Choose_Factory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -175,6 +171,10 @@
     <Page Include="Item_Details.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Location.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Login.xaml">
       <Generator>MSBuild:Compile</Generator>

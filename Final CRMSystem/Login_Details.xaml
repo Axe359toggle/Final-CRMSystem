@@ -10,10 +10,10 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="52"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="60"/>
+            <RowDefinition/>
+            <RowDefinition Height="58"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Height="52">
+        <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="52"/>
                 <ColumnDefinition Width="*"/>
@@ -29,7 +29,7 @@
         </Grid>
         <Grid Grid.Row="1">
             <ScrollViewer>
-                <Border Padding="10" Background="PaleVioletRed"  Margin="20" CornerRadius="30">
+                <Border Padding="10" Background="White"  Margin="20" CornerRadius="30">
                     <StackPanel>
                         <TextBlock Text="Login Details" HorizontalAlignment="Left"  Foreground="Black" FontWeight="Heavy" FontSize="25" Margin="50,10,0,10"/>
 
@@ -67,7 +67,7 @@
                             <DockPanel Grid.Column="3" Height="30" Width="30" VerticalAlignment="Center">
                                 <Image x:Name="loginIDNotify"/>
                             </DockPanel>
-                            
+
                         </Grid>
                         <Grid Margin="10 5 10 5">
                             <Grid.ColumnDefinitions>
@@ -186,7 +186,7 @@
                 </Border>
             </ScrollViewer>
         </Grid>
-        <Grid Grid.Row="2" Margin="100 10 50 20">
+        <Grid Grid.Row="2" Margin="100,10,50,11">
             <Button x:Name="ok_btn" Width="100" HorizontalAlignment="Right" Padding="5" Content="Ok" Click="ok_btn_Click"/>
         </Grid>
     </Grid>

@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Final_CRMSystem
 {
     /// <summary>
-    /// Interaction logic for Batch_Item_Complaint.xaml
+    /// Interaction logic for Location.xaml
     /// </summary>
-    public partial class Batch_Item_Complaint : Window
+    public partial class Location : Window
     {
-        public Batch_Item_Complaint()
+        public Location()
         {
             InitializeComponent();
         }

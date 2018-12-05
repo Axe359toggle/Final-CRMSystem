@@ -30,7 +30,7 @@
         <Grid Grid.Row="1">
             <ScrollViewer>
 
-                <Border Padding="10" Background="LightBlue"  Margin="20" CornerRadius="30">
+                <Border Padding="10" Background="white"  Margin="20" CornerRadius="30">
                     <StackPanel>
                         <StackPanel>
                             <TextBlock Text="Rebate Payment" HorizontalAlignment="Left"  Foreground="Black" FontWeight="Heavy"  FontStyle="Oblique" FontSize="25" Margin="288,10,0,10"/>
