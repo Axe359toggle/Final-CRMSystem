@@ -9,16 +9,16 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="52"/>
+            <RowDefinition Height="{StaticResource panelRowSize}"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Height="52">
+        <Grid Grid.Row="0" Height="{StaticResource panelSize}">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="52"/>
+                <ColumnDefinition Width="{StaticResource panelRowSize}"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="back_btn" Width="52" Height="52" Background="Transparent" Grid.Column="0" Click="back_btn_Click">
+            <Button x:Name="back_btn" Width="{StaticResource panelSize}" Height="{StaticResource panelSize}" Background="Transparent" Grid.Column="0" Click="back_btn_Click">
                 <DockPanel>
                     <Image Source="{StaticResource backButtonImage}"/>
                 </DockPanel>
@@ -29,11 +29,9 @@
         </Grid>
         <Grid Grid.Row="1">
             <ScrollViewer>
-
-<Border Padding="10" Background="white"  Margin="20" CornerRadius="30">
-        <StackPanel>
-            <StackPanel>
-                <TextBlock Text="Item Complaints" HorizontalAlignment="Left"  Foreground="Black" FontWeight="Heavy"  FontStyle="Oblique" FontSize="25" Margin="288,10,0,10"/>
+                <Border Padding="10" Background="LightBlue"  Margin="20" CornerRadius="30">
+                    <StackPanel>
+                        <TextBlock Text="Item Complaints" HorizontalAlignment="Left"  Foreground="Black" FontWeight="Heavy"  FontStyle="Oblique" FontSize="25" Margin="288,10,0,10"/>
 
                 <!--Buttons-->
                 <Grid Margin="61,10,10,10">
@@ -99,10 +97,8 @@
                     </StackPanel>
                     <DatePicker HorizontalAlignment="Left" Height="28" Width="208" Margin="203,226,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" />
                 </Grid>
-                <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="244" Margin="10,0,0,0" Width="822"/>
-
-            </StackPanel>
-        </StackPanel>
+                            <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="244" Margin="10,0,0,0" Width="822"/>
+                        </StackPanel>
     </Border>
     </ScrollViewer>
     </Grid>

@@ -20,9 +20,29 @@ namespace Final_CRMSystem
     /// </summary>
     public partial class CommonControlPanel : UserControl
     {
+        Window parentWindow;
         public CommonControlPanel()
         {
             InitializeComponent();
+            this.Loaded += new RoutedEventHandler(Loaded_Panel);
+        }
+
+        private void btn_logout_Click(object sender, RoutedEventArgs e)
+        {
+            Database db = new Database();
+            string query = "Update LoginDetails set logout_dt = GETDATE() WHERE logindetail_id ='"+ Login.logindetailID +"' ";
+            db.Save_Del_Update(query);
+
+            Login lg = new Login();
+            lg.Show();
+            parentWindow.Hide();
+
+            MessageBox.Show("Logged out","Information",MessageBoxButton.OK,MessageBoxImage.Exclamation);
+        }
+
+        private void Loaded_Panel(object sender, RoutedEventArgs e)
+        {
+            parentWindow = Window.GetWindow(this);
         }
     }
 }

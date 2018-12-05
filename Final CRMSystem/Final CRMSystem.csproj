@@ -54,6 +54,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Assign_New_Item_Window.xaml.cs">
+      <DependentUpon>Assign_New_Item_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Batch Item Complaint.xaml.cs">
+      <DependentUpon>Batch Item Complaint.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Choose_Factory.xaml.cs">
       <DependentUpon>Choose_Factory.xaml</DependentUpon>
     </Compile>
@@ -79,6 +85,9 @@
     <Compile Include="Deliver_To_Customer.xaml.cs">
       <DependentUpon>Deliver_To_Customer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Item_Details.xaml.cs">
+      <DependentUpon>Item_Details.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HQ_insert_Dashboard.xaml.cs">
       <DependentUpon>HQ_insert_Dashboard.xaml</DependentUpon>
     </Compile>
@@ -88,11 +97,8 @@
     <Compile Include="Item_Complaint.xaml.cs">
       <DependentUpon>Item_Complaint.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Item_Details.xaml.cs">
-      <DependentUpon>Item_Details.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Location.xaml.cs">
-      <DependentUpon>Location.xaml</DependentUpon>
+    <Compile Include="Factory_Item_Details.xaml.cs">
+      <DependentUpon>Factory_Item_Details.xaml</DependentUpon>
     </Compile>
     <Compile Include="Login_Details.xaml.cs">
       <DependentUpon>Login_Details.xaml</DependentUpon>
@@ -124,6 +130,14 @@
     <Compile Include="Staff_Complaint.xaml.cs">
       <DependentUpon>Staff_Complaint.xaml</DependentUpon>
     </Compile>
+    <Page Include="Assign_New_Item_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Batch Item Complaint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Choose_Factory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -156,6 +170,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Item_Details.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="HQ_insert_Dashboard.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -168,13 +186,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Item_Details.xaml">
+    <Page Include="Factory_Item_Details.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Location.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Login.xaml">
       <Generator>MSBuild:Compile</Generator>

@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Final_CRMSystem
 {
     /// <summary>
-    /// Interaction logic for Delivery.xaml
+    /// Interaction logic for Assign_New_Item_Window.xaml
     /// </summary>
-    public partial class Delivery : Window
+    public partial class Assign_New_Item_Window : Window
     {
-        public Delivery()
+        public Assign_New_Item_Window()
         {
             InitializeComponent();
         }

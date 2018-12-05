@@ -25,7 +25,7 @@ namespace Final_CRMSystem
         private string managerID;
         private string title;
         private string fullName;
-        private string address;
+        private string tp;
         private string email;
         private string accStatus;
         private string desID;
@@ -69,7 +69,7 @@ namespace Final_CRMSystem
             txtManagerID.Text = "";
             cmbTitle.Text = "";
             txtFullName.Text = "";
-            txtAddress.Text = "";
+            txtTp.Text = "";
             txtEmail.Text = "";
             txtLoginStatus.Text = "";
             cmbDes.Text = "";
@@ -105,6 +105,7 @@ namespace Final_CRMSystem
         {
             setManagerID();
             txtManagerID.IsReadOnly = true;
+            txtlocationID.IsReadOnly = true;
             btnProcess.Content = "Insert";
             rbnUpdate.IsEnabled = false;
             btnSetLogin.IsEnabled = false;
@@ -116,21 +117,24 @@ namespace Final_CRMSystem
         private void setUpdate()
         {
             txtManagerID.IsReadOnly = true;
-            btnProcess.Content = "Update";
+            txtlocationID.IsReadOnly = true;
             btnSetLogin.IsEnabled = true;
             btnLocationAdd.IsEnabled = true;
-            setErrorImagesNull();
+            txtlocationID.Text = "";
             rbnUpdate.IsEnabled = true;
+            btnProcess.Content = "Update";
+            setErrorImagesNull();
         }
 
         //load Search option
         private void setSearch()
         {
             txtManagerID.IsReadOnly = false;
-            btnProcess.Content = "Search";
+            txtlocationID.IsReadOnly = false;
             rbnUpdate.IsEnabled = false;
             btnSetLogin.IsEnabled = false;
             btnLocationAdd.IsEnabled = false;
+            btnProcess.Content = "Search";
             setErrorImagesNull();
         }
 
@@ -174,7 +178,7 @@ namespace Final_CRMSystem
 
                         title = cmbTitle.Text.Trim();
                         fullName = txtFullName.Text.Trim();
-                        address = txtAddress.Text.Trim();
+                        tp = txtTp.Text.Trim();
                         email = txtEmail.Text.Trim();
                         //accStatus = 
                         //loginID;
@@ -198,7 +202,7 @@ namespace Final_CRMSystem
 
 
                         Database db = new Database();
-                        string query = "INSERT INTO Manager (emp_id, emp_title, emp_fullname, emp_addr, emp_email, des_id) values ('" + managerID + "','" + title + "','" + fullName + "','" + address + "','" + email + "','" + desID + "')";
+                        string query = "INSERT INTO Manager (emp_id, emp_title, emp_fullname, emp_tp, emp_email, des_id) values ('" + managerID + "','" + title + "','" + fullName + "','" + tp + "','" + email + "','" + desID + "')";
                         int rows = db.Save_Del_Update(query);
 
                         if (rows > 0)
@@ -227,7 +231,7 @@ namespace Final_CRMSystem
                 else if (rbnSearch.IsChecked == true)
                 {
 
-                    string query = "SELECT emp_id,emp_title,emp_fullname,emp_addr,emp_email,des_id,login_id from Manager";
+                    string query = "SELECT emp_id,emp_title,emp_fullname,emp_tp,emp_email,des_id,login_id from Manager";
                     int x = 0;
 
                     void checkX()
@@ -238,7 +242,7 @@ namespace Final_CRMSystem
                         }
                     }
 
-                    if (chkManagerID.IsChecked == true || chkTitle.IsChecked == true || chkFullName.IsChecked==true || chkAddress.IsChecked==true || chkEmail.IsChecked==true || chkAccStatus.IsChecked==true || chkDes.IsChecked==true || chkLocation.IsChecked==true)
+                    if (chkManagerID.IsChecked == true || chkTitle.IsChecked == true || chkFullName.IsChecked==true || chkTp.IsChecked==true || chkEmail.IsChecked==true || chkAccStatus.IsChecked==true || chkDes.IsChecked==true || chkLocation.IsChecked==true)
                     {
                         query = query + " WHERE";
                     }
@@ -262,10 +266,10 @@ namespace Final_CRMSystem
                         query = query + " emp_fullname LIKE '%" + txtFullName.Text + "%'";
                         x++;
                     }
-                    if (chkAddress.IsChecked == true && txtAddress.Text.Length > 0)
+                    if (chkTp.IsChecked == true && txtTp.Text.Length > 0)
                     {
                         checkX();
-                        query = query + " emp_addr LIKE '%" + txtAddress.Text + "%'";
+                        query = query + " emp_tp LIKE '%" + txtTp.Text + "%'";
                         x++;
                     }
                     if (chkEmail.IsChecked == true && txtEmail.Text.Length > 0)
@@ -355,17 +359,17 @@ namespace Final_CRMSystem
                 fullNameNotify.Source = fullNameNotify.TryFindResource("notifyCorrectImage") as BitmapImage;
             }
 
-            if (txtAddress.Text.Trim().Length > CRMdbData.Manager.emp_addr.size || txtAddress.Text.Trim().Length == 0)
+            if (txtTp.Text.Trim().Length > CRMdbData.Manager.emp_tp.size || txtTp.Text.Trim().Length == 0)
             {
                 check = false;
-                addressNotify.Source = addressNotify.TryFindResource("notifyErrorImage") as BitmapImage;
+                tpNotify.Source = tpNotify.TryFindResource("notifyErrorImage") as BitmapImage;
             }
             else
             {
-                addressNotify.Source = addressNotify.TryFindResource("notifyCorrectImage") as BitmapImage;
+                tpNotify.Source = tpNotify.TryFindResource("notifyCorrectImage") as BitmapImage;
             }
 
-            if (txtEmail.Text.Trim().Length > CRMdbData.Manager.emp_email.size || txtAddress.Text.Trim().Length == 0)
+            if (txtEmail.Text.Trim().Length > CRMdbData.Manager.emp_email.size || txtEmail.Text.Trim().Length == 0)
             {
                 check = false;
                 emailNotify.Source = emailNotify.TryFindResource("notifyErrorImage") as BitmapImage;
@@ -393,7 +397,7 @@ namespace Final_CRMSystem
             managerIDNotify.Source = null;
             titleNotify.Source = null;
             fullNameNotify.Source = null;
-            addressNotify.Source = null;
+            tpNotify.Source = null;
             emailNotify.Source = null;
             desNotify.Source = null;
         }
@@ -405,40 +409,54 @@ namespace Final_CRMSystem
                 DataRowView dv = (DataRowView)managerDatagrid.SelectedItem;
                 if (dv != null)
                 {
-                    txtManagerID.Text = dv.Row.ItemArray[0].ToString();//manager_id
+                    txtManagerID.Text = managerID = dv.Row.ItemArray[0].ToString();//manager_id
                     cmbTitle.Text = dv.Row.ItemArray[1].ToString();//emp_title
-                    txtFullName.Text = dv.Row.ItemArray[2].ToString();//emp_title
-                    txtAddress.Text = dv.Row.ItemArray[3].ToString();//emp_title
-                    txtEmail.Text = dv.Row.ItemArray[4].ToString();//emp_title
-                    
+                    txtFullName.Text = dv.Row.ItemArray[2].ToString();//emp_fullname
+                    txtTp.Text = dv.Row.ItemArray[3].ToString();//emp_tp
+                    txtEmail.Text = dv.Row.ItemArray[4].ToString();//emp_email
 
+                    loginID = dv.Row.ItemArray[6].ToString();//login_id
+                    string query = "Select login_dt,logout_dt from LoginDetails where login_id='" + loginID + "' ";
+                    Database db = new Database();
+                    loginDatagrid.ItemsSource = db.GetData(query).AsDataView();
+
+                    string query2="";
                     desID = dv.Row.ItemArray[5].ToString();//emp_title
                     if (desID.Equals("S"))
                     {
                         cmbDes.Text = "Showroom Manager";
+                        query2 = "select location_id, assigned_dt from ShowroomManager_Showroom where emp_id ='" + dv.Row.ItemArray[0].ToString() + "' ";
                     }
                     else if (desID.Equals("F"))
                     {
                         cmbDes.Text = "Factory Manager";
+                        query2 = "select location_id, assigned_dt from FactoryManager_Factory where emp_id ='" + dv.Row.ItemArray[0].ToString() + "' ";
                     }
                     else if (desID.Equals("H"))
                     {
                         cmbDes.Text = "Headquarters Manager";
+                        query2 = "select '10000' as location_id, assigned_dt from HQ_Top_Manager where emp_id ='" + dv.Row.ItemArray[0].ToString() + "' ";
                     }
                     else if (desID.Equals("T"))
                     {
                         cmbDes.Text = "Top Manager";
+                        query2 = "select '10000' as location_id, assigned_dt from HQ_Top_Manager where emp_id ='" + dv.Row.ItemArray[0].ToString() + "' ";
                     }
-                    loginID = dv.Row.ItemArray[6].ToString();//emp_title
+                    locationDatagrid.ItemsSource = db.GetData(query2).AsDataView();
+
 
                     rbnUpdate.IsChecked = true;
                 }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString(), "SQL Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            
+
         }
 
         private void btnSetLogin_Click(object sender, RoutedEventArgs e)
@@ -457,6 +475,68 @@ namespace Final_CRMSystem
                     ld.Show();
                 }
             }
+        }
+
+        private void back_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Login.b1.goBack(this);
+        }
+
+        private void btnLocationAdd_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (desID.Length > 0 && managerID.Length > 0)
+                {
+
+                    string query2 = "";
+                    if (desID.Equals("S"))
+                    {
+                        cmbDes.Text = "Showroom Manager";
+                        query2 = "insert into ShowroomManager_Showroom (emp_id,assigned_dt,location_id) values('" + managerID + "',DEFAULT,'" + txtlocationID.Text + "') ";
+                    }
+                    else if (desID.Equals("F"))
+                    {
+                        cmbDes.Text = "Factory Manager";
+                        query2 = "insert into FactoryManager_Factory (emp_id,assigned_dt,location_id) values('" + managerID + "',DEFAULT,'" + txtlocationID.Text + "') ";
+                    }
+                    else if (desID.Equals("H"))
+                    {
+                        cmbDes.Text = "Headquarters Manager";
+                        query2 = "insert into HQ_Top_Manager (emp_id,assigned_dt) values('" + managerID + "',DEFAULT) ";
+                    }
+                    else if (desID.Equals("T"))
+                    {
+                        cmbDes.Text = "Top Manager";
+                        query2 = "insert into HQ_Top_Manager (emp_id,assigned_dt) values('" + managerID + "',DEFAULT) ";
+                    }
+
+                    Database db = new Database();
+                    int rows = db.Save_Del_Update(query2);
+                    if (rows > 0)
+                    {
+                        MessageBox.Show("Data inserted Successfully", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                        rbnUpdate.IsChecked = true;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data insertion failed", "Error", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString(), "SQL Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+
+            
+            
         }
     }
 }

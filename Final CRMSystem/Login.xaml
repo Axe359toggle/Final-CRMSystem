@@ -9,7 +9,6 @@
         WindowStartupLocation="CenterScreen">
    
     <Grid>
-
         <Grid Margin="30" VerticalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>

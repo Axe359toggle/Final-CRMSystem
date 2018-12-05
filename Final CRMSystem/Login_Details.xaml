@@ -9,16 +9,16 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="52"/>
-            <RowDefinition/>
-            <RowDefinition Height="58"/>
+            <RowDefinition Height="{StaticResource panelRowSize}"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
+        <Grid Grid.Row="0" Height="{StaticResource panelSize}">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="52"/>
+                <ColumnDefinition Width="{StaticResource panelRowSize}"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="back_btn" Width="52" Height="52" Background="Transparent" Grid.Column="0">
+            <Button x:Name="back_btn" Width="{StaticResource panelSize}" Height="{StaticResource panelSize}" Background="Transparent" Grid.Column="0" Click="back_btn_Click">
                 <DockPanel>
                     <Image Source="{StaticResource backButtonImage}"/>
                 </DockPanel>
@@ -29,7 +29,7 @@
         </Grid>
         <Grid Grid.Row="1">
             <ScrollViewer>
-                <Border Padding="10" Background="White"  Margin="20" CornerRadius="30">
+                <Border Padding="10" Background="PaleVioletRed"  Margin="20" CornerRadius="30">
                     <StackPanel>
                         <TextBlock Text="Login Details" HorizontalAlignment="Left"  Foreground="Black" FontWeight="Heavy" FontSize="25" Margin="50,10,0,10"/>
 
@@ -67,7 +67,7 @@
                             <DockPanel Grid.Column="3" Height="30" Width="30" VerticalAlignment="Center">
                                 <Image x:Name="loginIDNotify"/>
                             </DockPanel>
-
+                            
                         </Grid>
                         <Grid Margin="10 5 10 5">
                             <Grid.ColumnDefinitions>
@@ -186,7 +186,7 @@
                 </Border>
             </ScrollViewer>
         </Grid>
-        <Grid Grid.Row="2" Margin="100,10,50,11">
+        <Grid Grid.Row="2" Margin="100 10 50 20">
             <Button x:Name="ok_btn" Width="100" HorizontalAlignment="Right" Padding="5" Content="Ok" Click="ok_btn_Click"/>
         </Grid>
     </Grid>

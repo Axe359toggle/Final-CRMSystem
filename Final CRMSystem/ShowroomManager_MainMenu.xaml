@@ -10,13 +10,20 @@
 
     <Grid Margin="0,0,58,0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="52"/>
+            <RowDefinition Height="{StaticResource panelRowSize}"/>
             <RowDefinition Height="1*"/>
+            <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
-        <Grid VerticalAlignment="Top" Height="52" Grid.Row="0">
+        <Grid Grid.Row="0" Height="{StaticResource panelSize}">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="{StaticResource panelRowSize}"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
+            <Button x:Name="back_btn" Width="{StaticResource panelSize}" Height="{StaticResource panelSize}" Background="Transparent" Grid.Column="0" Click="back_btn_Click">
+                <DockPanel>
+                    <Image Source="{StaticResource backButtonImage}"/>
+                </DockPanel>
+            </Button>
             <Grid Grid.Column="1">
                 <local:CommonControlPanel/>
             </Grid>
